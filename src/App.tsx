@@ -1,12 +1,15 @@
 import { BrowserRouter } from "react-router-dom";
 import { AppThemeProvider } from "./shared/contexts";
 import { AppRoutes } from "./routes";
+import { SideBar } from "./shared/components/SideBar/SideBar";
 
-export const App: React.FC = () => {
+export const App = () => {
   return (
     <AppThemeProvider>
       <BrowserRouter>
-        <AppRoutes />
+        <SideBar>
+          <AppRoutes />
+        </SideBar>
       </BrowserRouter>
     </AppThemeProvider>
   );
